@@ -48,4 +48,22 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
 
+def palindrome(num):
+    original = str(num)
+    reverse = original[::-1]
+    return original == reverse
+
+number = int(input("Enter a number: "))
+
+print("Factorial:", factorial(number))
+
+if palindrome(number):
+    print(number, "is a palindrome.")
+else:
+    print(number, "is not a palindrome.")
