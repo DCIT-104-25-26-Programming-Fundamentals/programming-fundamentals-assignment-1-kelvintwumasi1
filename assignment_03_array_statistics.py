@@ -38,4 +38,21 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def find_sum(numbers):
+    return sum(numbers)
+
+def find_average(numbers):
+    return sum(numbers) / len(numbers)
+
+def find_max(numbers):
+    return max(numbers)
+
+def find_min(numbers):
+    return min(numbers)
+
+numbers = list(map(float, input("Enter numbers separated by spaces: ").split()))
+print("Sum:", find_sum(numbers))
+print("Average:", find_average(numbers))
+print("Maximum:", find_max(numbers))
+print("Minimum:", find_min(numbers))
 
