@@ -59,4 +59,60 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+# Function to add two matrices
+def add_matrix(A, B):
+    result = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(A[0])):
+            row.append(A[i][j] + B[i][j])
+        result.append(row)
+    return result
 
+def subtract_matrix(A, B):
+    result = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(A[0])):
+            row.append(A[i][j] - B[i][j])
+        result.append(row)
+    return result
+
+def transpose_matrix(A):
+    result = []
+    for j in range(len(A[0])):
+        row = []
+        for i in range(len(A)):
+            row.append(A[i][j])
+        result.append(row)
+    return result
+
+A = [
+    [1, 2],
+    [3, 4]
+]
+
+B = [
+    [5, 6],
+    [7, 8]
+]
+
+print("Matrix A:")
+for row in A:
+    print(row)
+
+print("\nMatrix B:")
+for row in B:
+    print(row)
+
+print("\nAddition:")
+for row in add_matrix(A, B):
+    print(row)
+
+print("\nSubtraction:")
+for row in subtract_matrix(A, B):
+    print(row)
+
+print("\nTranspose of Matrix A:")
+for row in transpose_matrix(A):
+    print(row)
